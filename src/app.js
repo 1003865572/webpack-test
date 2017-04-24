@@ -1,7 +1,10 @@
+import './css/common.css'
 import layer from './componets/layer/layer.js'
+
 const App = () => {
-  console.info(layer)
-  alert(1)
+  let app = document.getElementById('app')
+  let eml = new layer().tpl
+  app.innerHTML = eml
 }
 
 new App()

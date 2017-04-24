@@ -1,0 +1,12 @@
+@import './flex.css';
+@import './test.scss';
+
+html ,body{
+  padding: 0;
+  margin: 0;
+  background: #ccc;
+}
+
+ul li{
+  list-style: none;
+}
