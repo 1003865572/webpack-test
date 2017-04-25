@@ -57,7 +57,10 @@
 	var App = function App() {
 	  var app = document.getElementById('app');
 	  var eml = new _layer2.default().tpl;
-	  app.innerHTML = eml;
+	  app.innerHTML = eml({
+	    name: 'aa',
+	    item: [1, 2, 3]
+	  });
 	};
 
 	new App();
@@ -2665,7 +2668,24 @@
 /* 14 */
 /***/ (function(module, exports) {
 
-	module.exports = "<div class=\"layer\">\r\n    <div>\r\n        this is a layer\r\n    </div>\r\n</div>\r\n";
+	module.exports = function (obj) {
+	obj || (obj = {});
+	var __t, __p = '', __j = Array.prototype.join;
+	function print() { __p += __j.call(arguments, '') }
+	with (obj) {
+	__p += '<div class="layer">\r\n    <div>\r\n\r\n    </div>\r\n\r\n    this is a layer ' +
+	((__t = ( name )) == null ? '' : __t) +
+	'\r\n\r\n\r\n    \r\n    ';
+	 for (var i in item) { ;
+	__p += '\r\n      ' +
+	((__t = ( i )) == null ? '' : __t) +
+	'\r\n    ';
+	 } ;
+	__p += '\r\n</div>\r\n';
+
+	}
+	return __p
+	}
 
 /***/ }),
 /* 15 */

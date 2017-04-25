@@ -25,10 +25,16 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader?importLoaders=1!postcss-loader'
-      },{
+      },
+      {
+        test: /\.tpl$/,
+        loader: 'ejs'
+      },
+      {
         test: /\.less$/,
         loader: 'style!css!postcss!less'
-      },{
+      },
+      {
         test: /\.scss$/,
         loader: 'style!css!postcss!scss'
       }
